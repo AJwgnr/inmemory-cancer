@@ -1,0 +1,30 @@
+import = [
+  {
+                table = "cancer_project.dataLoading::LYMYLEUKWW";
+                schema = "CANCER_PROJECT";
+                file = "cancer_project.data:LYMYLEUKWW.csv"; 
+                delimField = ";";
+                header = false;
+            },{
+                table = "cancer_project.dataLoading::FEMGENWW";
+                schema = "CANCER_PROJECT";
+                file = "cancer_project.data:FEMGENWW.csv"; 
+                delimField = ";";
+                header = false;
+            }, {
+                table = "cancer_project.dataLoading::URINARYWW";
+                schema = "CANCER_PROJECT";
+                file = "cancer_project.data:URINARYWW.csv"; 
+                delimField = ";";
+                header = false;
+            },
+             {
+                table = "cancer_project.dataLoading::COLRECTWW";
+                schema = "CANCER_PROJECT";
+                file = "cancer_project.data:COLRECTWW.csv"; 
+                delimField = ";";
+                header = false;
+            }
+            
+];
+         

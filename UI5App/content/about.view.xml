@@ -1,0 +1,34 @@
+<!-- this is a comment. in the next tag, the xmlns tags define namespaces, the name after of the equality signs being the name of the namespace. In the code below, we can use this name instead of the full path -->
+<mvc:View controllerName="content.about"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:table="sap.ui.table"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:l="sap.ui.commons.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<!-- view content goes here -->
+	<!-- this HTML paragraph is used as a spacer -->
+	<html:p/>
+		<VBox class="sapUiSmallMargin">
+		<Text text="The data for this project is taken from the Seer dataset."/>
+	</VBox>
+
+		<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true">
+		<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+			<PDFViewer source="ressources/seerdic.pdf" title="Seerdic Data Description" height="1200px">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</PDFViewer>
+		</FlexBox>
+	</ScrollContainer>
+</mvc:View>
+
+
+

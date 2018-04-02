@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Lymyleuk" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="LYMYLEUK"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="cancer_project.dataLoading::LYMYLEUKWW" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW"/>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Filtering" filterExpressionLanguage="COLUMN_ENGINE">
+    <viewAttributes>
+      <viewAttribute id="Yearofdiagnosis"/>
+      <viewAttribute id="SurvivalMonthsFlag"/>
+      <viewAttribute id="SurvivalMonths"/>
+      <viewAttribute id="Sex"/>
+      <viewAttribute id="Registry"/>
+      <viewAttribute id="RaceEthnicity"/>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="SeerOtherCauseOfDeathClassification"/>
+      <viewAttribute id="PatientID"/>
+    
+      <viewAttribute id="YearofBirth"/>
+    
+      <viewAttribute id="SequenceNumberCentral"/>
+    
+      <viewAttribute id="TotalNumberOfInSituMalignantTumorsForPatien"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#cancer_project.dataLoading::LYMYLEUKWW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Yearofdiagnosis" source="Yearofdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonthsFlag" source="SurvivalMonthsFlag"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonths" source="SurvivalMonths"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Sex" source="Sex"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Registry" source="Registry"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RaceEthnicity" source="RaceEthnicity"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SeerOtherCauseOfDeathClassification" source="SeerOtherCauseOfDeathClassification"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PatientID" source="PatientID"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="YearofBirth" source="YearofBirth"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="SequenceNumberCentral" source="SequenceNumberCentral"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="TotalNumberOfInSituMalignantTumorsForPatien" source="TotalNumberOfInSituMalignantTumorsForPatien"/>
+    </input>
+    <filter>(&quot;SurvivalMonthsFlag&quot; = 0 or &quot;SurvivalMonthsFlag&quot; =1) and
+(&quot;SurvivalMonths&quot; != 9999) and
+(&quot;Sex&quot; = 1  or &quot;Sex&quot; =2) and
+(&quot;Ageatdiagnosis&quot; != 999) 
+
+
+</filter>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Filtering">
+  <attributes>
+    <attribute id="Yearofdiagnosis" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Yearofdiagnosis"/>
+      <keyMapping columnObjectName="Filtering" columnName="Yearofdiagnosis"/>
+    </attribute>
+    <attribute id="SurvivalMonthsFlag" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SurvivalMonthsFlag"/>
+      <keyMapping columnObjectName="Filtering" columnName="SurvivalMonthsFlag"/>
+    </attribute>
+    <attribute id="SurvivalMonths" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SurvivalMonths"/>
+      <keyMapping columnObjectName="Filtering" columnName="SurvivalMonths"/>
+    </attribute>
+    <attribute id="Sex" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sex"/>
+      <keyMapping columnObjectName="Filtering" columnName="Sex"/>
+    </attribute>
+    <attribute id="Registry" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Registry"/>
+      <keyMapping columnObjectName="Filtering" columnName="Registry"/>
+    </attribute>
+    <attribute id="RaceEthnicity" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RaceEthnicity"/>
+      <keyMapping columnObjectName="Filtering" columnName="RaceEthnicity"/>
+    </attribute>
+    <attribute id="Ageatdiagnosis" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ageatdiagnosis"/>
+      <keyMapping columnObjectName="Filtering" columnName="Ageatdiagnosis"/>
+    </attribute>
+    <attribute id="SeerOtherCauseOfDeathClassification" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerOtherCauseOfDeathClassification"/>
+      <keyMapping columnObjectName="Filtering" columnName="SeerOtherCauseOfDeathClassification"/>
+    </attribute>
+    <attribute id="PatientID" order="9" displayAttribute="false" attributeHierarchyActive="false" key="true">
+      <descriptions defaultDescription="PatientID"/>
+      <keyMapping columnObjectName="Filtering" columnName="PatientID"/>
+    </attribute>
+  
+    <attribute id="SequenceNumberCentral" key="true" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SequenceNumberCentral"/>
+      <keyMapping columnObjectName="Filtering" columnName="SequenceNumberCentral"/>
+    </attribute>
+  
+    <attribute id="TotalNumberOfInSituMalignantTumorsForPatien" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <keyMapping columnObjectName="Filtering" columnName="TotalNumberOfInSituMalignantTumorsForPatien"/>
+    </attribute>
+  
+    <attribute id="YearofBirth" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="YearofBirth"/>
+      <keyMapping columnObjectName="Filtering" columnName="YearofBirth"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Filtering" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="78" y="285"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

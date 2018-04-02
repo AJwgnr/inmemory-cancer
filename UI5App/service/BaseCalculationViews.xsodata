@@ -1,0 +1,11 @@
+service {
+    "_SYS_BIC"."cancer_project.calculationViews.baseViews/femgen" as "BaseViewFemgen"
+    keys generate local "ID";
+    "_SYS_BIC"."cancer_project.calculationViews.baseViews/Lymyleuk" as "BaseViewLymyleuk"
+    keys generate local "ID";
+    "_SYS_BIC"."cancer_project.calculationViews.baseViews/Urinary" as "BaseViewUrinary"
+    keys generate local "ID";
+    
+    "_SYS_BIC"."cancer_project.calculationViews.complete/UnionCalculationView" as "UnionCalculationView"
+    keys generate local "ID";
+}

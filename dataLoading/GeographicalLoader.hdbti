@@ -1,0 +1,9 @@
+import = [
+  {
+                table = "cancer_project.dataLoading::GeographicalData";
+                schema = "CANCER_PROJECT";
+                file = "cancer_project.data:GeographicalData.csv"; 
+                delimField = ";";
+                header = false;
+            }
+            ];    

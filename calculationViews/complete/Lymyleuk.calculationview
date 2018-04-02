@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Lymyleuk" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="Lymyleuk"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="cancer_project.dataLoading::LYMYLEUKWW" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW"/>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="cancer_project.dataLoading::LYMYLEUKWW">
+  <attributes>
+    <attribute id="AJCCStage3rdEdition19882003" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AJCCStage3rdEdition19882003"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="AJCCStage3rdEdition19882003"/>
+    </attribute>
+    <attribute id="AYASiteRecodeWHO2008" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AYASiteRecodeWHO2008"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="AYASiteRecodeWHO2008"/>
+    </attribute>
+    <attribute id="AgeRecode1YearOlds" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AgeRecode1YearOlds"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="AgeRecode1YearOlds"/>
+    </attribute>
+    <attribute id="Ageatdiagnosis" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ageatdiagnosis"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Ageatdiagnosis"/>
+    </attribute>
+    <attribute id="Behavior9200ICDO2" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Behavior9200ICDO2"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Behavior9200ICDO2"/>
+    </attribute>
+    <attribute id="BehaviorCodeICDO3" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BehaviorCodeICDO3"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BehaviorCodeICDO3"/>
+    </attribute>
+    <attribute id="BehaviourRecodeForAnalysis" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BehaviourRecodeForAnalysis"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BehaviourRecodeForAnalysis"/>
+    </attribute>
+    <attribute id="BreastAdjustedAJCC6thM1988" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BreastAdjustedAJCC6thM1988"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BreastAdjustedAJCC6thM1988"/>
+    </attribute>
+    <attribute id="BreastAdjustedAJCC6thN1988" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BreastAdjustedAJCC6thN1988"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BreastAdjustedAJCC6thN1988"/>
+    </attribute>
+    <attribute id="BreastAdjustedAJCC6thStage1988" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BreastAdjustedAJCC6thStage1988"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BreastAdjustedAJCC6thStage1988"/>
+    </attribute>
+    <attribute id="BreastAdjustedAJCC6thT1988" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BreastAdjustedAJCC6thT1988"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BreastAdjustedAJCC6thT1988"/>
+    </attribute>
+    <attribute id="BreastSubtype201" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BreastSubtype201"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="BreastSubtype201"/>
+    </attribute>
+    <attribute id="CODToSiteRECKMVitalStatusRecode" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CODToSiteRECKMVitalStatusRecode"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CODToSiteRECKMVitalStatusRecode"/>
+    </attribute>
+    <attribute id="CSExtension" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSExtension"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSExtension"/>
+    </attribute>
+    <attribute id="CSLymphNodes" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSLymphNodes"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSLymphNodes"/>
+    </attribute>
+    <attribute id="CSLymphNodesEval" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSLymphNodesEval"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSLymphNodesEval"/>
+    </attribute>
+    <attribute id="CSMetsAtDXBone" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSMetsAtDXBone"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSMetsAtDXBone"/>
+    </attribute>
+    <attribute id="CSMetsAtDXBrain" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSMetsAtDXBrain"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSMetsAtDXBrain"/>
+    </attribute>
+    <attribute id="CSMetsAtDXLiver" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSMetsAtDXLiver"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSMetsAtDXLiver"/>
+    </attribute>
+    <attribute id="CSMetsAtDXLung" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSMetsAtDXLung"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSMetsAtDXLung"/>
+    </attribute>
+    <attribute id="CSMetsEval" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSMetsEval"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSMetsEval"/>
+    </attribute>
+    <attribute id="CSMetsatDx" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSMetsatDx"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSMetsatDx"/>
+    </attribute>
+    <attribute id="CSSchemaAJCC6thEDPreviouslyCalledV1" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSchemaAJCC6thEDPreviouslyCalledV1"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSchemaAJCC6thEDPreviouslyCalledV1"/>
+    </attribute>
+    <attribute id="CSSchemaV0204" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSchemaV0204"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSchemaV0204"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor1" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor1"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor1"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor10" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor10"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor10"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor11" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor11"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor11"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor12" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor12"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor12"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor13" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor13"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor13"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor15" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor15"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor15"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor16" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor16"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor16"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor2" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor2"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor2"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor25" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor25"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor25"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor3" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor3"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor3"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor4" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor4"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor4"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor5" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor5"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor5"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor6" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor6"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor6"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor7" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor7"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor7"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor8" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor8"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor8"/>
+    </attribute>
+    <attribute id="CSSiteSpecificFactor9" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSSiteSpecificFactor9"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSSiteSpecificFactor9"/>
+    </attribute>
+    <attribute id="CSTumorSize" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSTumorSize"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSTumorSize"/>
+    </attribute>
+    <attribute id="CSTumorSizeExtEval" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSTumorSizeExtEval"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSTumorSizeExtEval"/>
+    </attribute>
+    <attribute id="CSVersionDerived" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSVersionDerived"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSVersionDerived"/>
+    </attribute>
+    <attribute id="CSVersionInputCurrent" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSVersionInputCurrent"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSVersionInputCurrent"/>
+    </attribute>
+    <attribute id="CSVersionInputOriginal" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CSVersionInputOriginal"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CSVersionInputOriginal"/>
+    </attribute>
+    <attribute id="CauseOfDeathToSeerSiteRecode" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CauseOfDeathToSeerSiteRecode"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CauseOfDeathToSeerSiteRecode"/>
+    </attribute>
+    <attribute id="CodingSystemforEOD" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CodingSystemforEOD"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="CodingSystemforEOD"/>
+    </attribute>
+    <attribute id="DerivedAJCC6M" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC6M"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC6M"/>
+    </attribute>
+    <attribute id="DerivedAJCC6N" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC6N"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC6N"/>
+    </attribute>
+    <attribute id="DerivedAJCC6StageGrp" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC6StageGrp"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC6StageGrp"/>
+    </attribute>
+    <attribute id="DerivedAJCC6T" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC6T"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC6T"/>
+    </attribute>
+    <attribute id="DerivedAJCC7M" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC7M"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC7M"/>
+    </attribute>
+    <attribute id="DerivedAJCC7N" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC7N"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC7N"/>
+    </attribute>
+    <attribute id="DerivedAJCC7StageGrp" order="54" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC7StageGrp"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC7StageGrp"/>
+    </attribute>
+    <attribute id="DerivedAJCC7T" order="55" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCC7T"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCC7T"/>
+    </attribute>
+    <attribute id="DerivedAJCCFlag" order="56" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedAJCCFlag"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedAJCCFlag"/>
+    </attribute>
+    <attribute id="DerivedHER2Recode2010" order="57" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedHER2Recode2010"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedHER2Recode2010"/>
+    </attribute>
+    <attribute id="DerivedSS1977" order="58" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedSS1977"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedSS1977"/>
+    </attribute>
+    <attribute id="DerivedSS2000" order="59" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DerivedSS2000"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DerivedSS2000"/>
+    </attribute>
+    <attribute id="DiagnosticConfirmation" order="60" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DiagnosticConfirmation"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="DiagnosticConfirmation"/>
+    </attribute>
+    <attribute id="EODExtension" order="61" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODExtension"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODExtension"/>
+    </attribute>
+    <attribute id="EODExtensionProstPath" order="62" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODExtensionProstPath"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODExtensionProstPath"/>
+    </attribute>
+    <attribute id="EODLymphNodeInvolv" order="63" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODLymphNodeInvolv"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODLymphNodeInvolv"/>
+    </attribute>
+    <attribute id="EODOld13Digit" order="64" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODOld13Digit"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODOld13Digit"/>
+    </attribute>
+    <attribute id="EODOld2Digit" order="65" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODOld2Digit"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODOld2Digit"/>
+    </attribute>
+    <attribute id="EODOld4Digit" order="66" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODOld4Digit"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODOld4Digit"/>
+    </attribute>
+    <attribute id="EODTumorSize" order="67" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EODTumorSize"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="EODTumorSize"/>
+    </attribute>
+    <attribute id="ERStatusRecodeBreastCancer1990" order="68" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERStatusRecodeBreastCancer1990"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="ERStatusRecodeBreastCancer1990"/>
+    </attribute>
+    <attribute id="FirstMalignentPrimaryIndicator" order="69" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FirstMalignentPrimaryIndicator"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="FirstMalignentPrimaryIndicator"/>
+    </attribute>
+    <attribute id="Grade" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Grade"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Grade"/>
+    </attribute>
+    <attribute id="HistologicTypeICDO3" order="71" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HistologicTypeICDO3"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="HistologicTypeICDO3"/>
+    </attribute>
+    <attribute id="Histology9200ICO2" order="72" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Histology9200ICO2"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Histology9200ICO2"/>
+    </attribute>
+    <attribute id="HistologyRecodeBrainGroupings" order="73" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HistologyRecodeBrainGroupings"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="HistologyRecodeBrainGroupings"/>
+    </attribute>
+    <attribute id="HistologyRecodeBroadGroupings" order="74" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HistologyRecodeBroadGroupings"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="HistologyRecodeBroadGroupings"/>
+    </attribute>
+    <attribute id="ICCCSiteRecExtendedICDO3WHO2008" order="75" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ICCCSiteRecExtendedICDO3WHO2008"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="ICCCSiteRecExtendedICDO3WHO2008"/>
+    </attribute>
+    <attribute id="ICCCSiteRecodeICDOWHO2008" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ICCCSiteRecodeICDOWHO2008"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="ICCCSiteRecodeICDOWHO2008"/>
+    </attribute>
+    <attribute id="IHSLink" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="IHSLink"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="IHSLink"/>
+    </attribute>
+    <attribute id="InsuranceRecode2007" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="InsuranceRecode2007"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="InsuranceRecode2007"/>
+    </attribute>
+    <attribute id="Laterality" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Laterality"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Laterality"/>
+    </attribute>
+    <attribute id="LymphVascularInvasion" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LymphVascularInvasion"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="LymphVascularInvasion"/>
+    </attribute>
+    <attribute id="LymphomaSubtypeRecodeWHO2008" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LymphomaSubtypeRecodeWHO2008"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="LymphomaSubtypeRecodeWHO2008"/>
+    </attribute>
+    <attribute id="LymphomasANNArborStaging1983" order="82" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LymphomasANNArborStaging1983"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="LymphomasANNArborStaging1983"/>
+    </attribute>
+    <attribute id="MValueBasedOnAJCC3rd19882003" order="83" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MValueBasedOnAJCC3rd19882003"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="MValueBasedOnAJCC3rd19882003"/>
+    </attribute>
+    <attribute id="MaritalStatus" order="84" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MaritalStatus"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="MaritalStatus"/>
+    </attribute>
+    <attribute id="Monthofdiagnosis" order="85" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Monthofdiagnosis"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Monthofdiagnosis"/>
+    </attribute>
+    <attribute id="NHIADerivedHispanicOrigin" order="86" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NHIADerivedHispanicOrigin"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="NHIADerivedHispanicOrigin"/>
+    </attribute>
+    <attribute id="NValueBasedOnAJCC3rd19882003" order="87" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NValueBasedOnAJCC3rd19882003"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="NValueBasedOnAJCC3rd19882003"/>
+    </attribute>
+    <attribute id="OriginRecodeNHIAHispanicNonHi" order="88" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OriginRecodeNHIAHispanicNonHi"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="OriginRecodeNHIAHispanicNonHi"/>
+    </attribute>
+    <attribute id="PRStatusRecodeBreastCancer1990" order="89" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRStatusRecodeBreastCancer1990"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="PRStatusRecodeBreastCancer1990"/>
+    </attribute>
+    <attribute id="PatientID" key="true" order="90" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PatientID"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="PatientID"/>
+    </attribute>
+    <attribute id="PrimaryByInternationalRules" order="91" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PrimaryByInternationalRules"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="PrimaryByInternationalRules"/>
+    </attribute>
+    <attribute id="PrimarySite" order="92" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PrimarySite"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="PrimarySite"/>
+    </attribute>
+    <attribute id="RACERecodeWBAIAPI" order="93" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RACERecodeWBAIAPI"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RACERecodeWBAIAPI"/>
+    </attribute>
+    <attribute id="RXSummRegLNExamined" order="94" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummRegLNExamined"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummRegLNExamined"/>
+    </attribute>
+    <attribute id="RXSummScopeReg9802" order="95" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummScopeReg9802"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummScopeReg9802"/>
+    </attribute>
+    <attribute id="RXSummScopeRegLNSur" order="96" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummScopeRegLNSur"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummScopeRegLNSur"/>
+    </attribute>
+    <attribute id="RXSummSurgOth9802" order="97" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummSurgOth9802"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummSurgOth9802"/>
+    </attribute>
+    <attribute id="RXSummSurgOthregDis" order="98" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummSurgOthregDis"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummSurgOthregDis"/>
+    </attribute>
+    <attribute id="RXSummSurgPrimsite" order="99" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummSurgPrimsite"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummSurgPrimsite"/>
+    </attribute>
+    <attribute id="RXSummSurgType" order="100" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RXSummSurgType"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RXSummSurgType"/>
+    </attribute>
+    <attribute id="RaceEthnicity" order="101" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RaceEthnicity"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RaceEthnicity"/>
+    </attribute>
+    <attribute id="RaceRecodeWhiteBlackOther" order="102" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RaceRecodeWhiteBlackOther"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RaceRecodeWhiteBlackOther"/>
+    </attribute>
+    <attribute id="ReasonForNoSurgery" order="103" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ReasonForNoSurgery"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="ReasonForNoSurgery"/>
+    </attribute>
+    <attribute id="RecodeICDO2to10" order="104" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RecodeICDO2to10"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RecodeICDO2to10"/>
+    </attribute>
+    <attribute id="RecodeICDO2to9" order="105" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RecodeICDO2to9"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RecodeICDO2to9"/>
+    </attribute>
+    <attribute id="RegionalNodesExamined" order="106" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RegionalNodesExamined"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RegionalNodesExamined"/>
+    </attribute>
+    <attribute id="RegionalNodesPositive" order="107" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RegionalNodesPositive"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="RegionalNodesPositive"/>
+    </attribute>
+    <attribute id="Registry" order="108" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Registry"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Registry"/>
+    </attribute>
+    <attribute id="SeerCauseSpecificDeathClassification" order="109" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerCauseSpecificDeathClassification"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerCauseSpecificDeathClassification"/>
+    </attribute>
+    <attribute id="SeerHistoricStageA" order="110" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerHistoricStageA"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerHistoricStageA"/>
+    </attribute>
+    <attribute id="SeerModifiedAJCCStage3rdED19882003" order="111" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerModifiedAJCCStage3rdED19882003"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerModifiedAJCCStage3rdED19882003"/>
+    </attribute>
+    <attribute id="SeerOtherCauseOfDeathClassification" order="112" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerOtherCauseOfDeathClassification"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerOtherCauseOfDeathClassification"/>
+    </attribute>
+    <attribute id="SeerRecordNumber" order="113" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerRecordNumber"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerRecordNumber"/>
+    </attribute>
+    <attribute id="SeerSummaryStage1977" order="114" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerSummaryStage1977"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerSummaryStage1977"/>
+    </attribute>
+    <attribute id="SeerSummaryStage2000" order="115" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerSummaryStage2000"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerSummaryStage2000"/>
+    </attribute>
+    <attribute id="SeerTypeOfFollowup" order="116" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerTypeOfFollowup"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SeerTypeOfFollowup"/>
+    </attribute>
+    <attribute id="SequenceNumberCentral" key="true" order="117" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SequenceNumberCentral"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SequenceNumberCentral"/>
+    </attribute>
+    <attribute id="Sex" order="118" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sex"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Sex"/>
+    </attribute>
+    <attribute id="SiteRecodeICDO3WHO2008" order="119" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SiteRecodeICDO3WHO2008"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SiteRecodeICDO3WHO2008"/>
+    </attribute>
+    <attribute id="StateCountyRecode" order="120" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="StateCountyRecode"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="StateCountyRecode"/>
+    </attribute>
+    <attribute id="SummaryStage200019" order="121" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SummaryStage200019"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SummaryStage200019"/>
+    </attribute>
+    <attribute id="SurvivalMonths" order="122" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SurvivalMonths"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SurvivalMonths"/>
+    </attribute>
+    <attribute id="SurvivalMonthsFlag" order="123" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SurvivalMonthsFlag"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="SurvivalMonthsFlag"/>
+    </attribute>
+    <attribute id="TValueBasedOnAJCC3rd1988" order="124" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TValueBasedOnAJCC3rd1988"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TValueBasedOnAJCC3rd1988"/>
+    </attribute>
+    <attribute id="TotalNumberOfBenignBorderlineTumorsForPatient" order="125" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TotalNumberOfBenignBorderlineTumorsForPatient"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TotalNumberOfBenignBorderlineTumorsForPatient"/>
+    </attribute>
+    <attribute id="TotalNumberOfInSituMalignantTumorsForPatien" order="126" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TotalNumberOfInSituMalignantTumorsForPatien"/>
+    </attribute>
+    <attribute id="TumorMarker1" order="127" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TumorMarker1"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TumorMarker1"/>
+    </attribute>
+    <attribute id="TumorMarker2" order="128" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TumorMarker2"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TumorMarker2"/>
+    </attribute>
+    <attribute id="TumorMarker3" order="129" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TumorMarker3"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TumorMarker3"/>
+    </attribute>
+    <attribute id="TypeofReportingSource" order="130" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TypeofReportingSource"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="TypeofReportingSource"/>
+    </attribute>
+    <attribute id="VitalStatusRecode" order="131" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VitalStatusRecode"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="VitalStatusRecode"/>
+    </attribute>
+    <attribute id="YearofBirth" order="132" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="YearofBirth"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="YearofBirth"/>
+    </attribute>
+    <attribute id="Yearofdiagnosis" order="133" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Yearofdiagnosis"/>
+      <keyMapping schemaName="CANCER_PROJECT" columnObjectName="cancer_project.dataLoading::LYMYLEUKWW" columnName="Yearofdiagnosis"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

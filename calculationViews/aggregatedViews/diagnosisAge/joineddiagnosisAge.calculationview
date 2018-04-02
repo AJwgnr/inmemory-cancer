@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="joineddiagnosisAge" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="joineddiagnosisAge"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Lymyleuk" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.aggregatedViews.diagnosisAge/calculationviews/Lymyleuk</resourceUri>
+  </DataSource>
+  <DataSource id="Urinary" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.aggregatedViews.diagnosisAge/calculationviews/Urinary</resourceUri>
+  </DataSource>
+  <DataSource id="Femgen" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.aggregatedViews.diagnosisAge/calculationviews/Femgen</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="Lymyleuk" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Lymyleuk">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Lymyleuk" source="PatientID"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="Lymyleuk"/>
+      <viewAttribute id="Urinary" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Lymyleuk" source="Lymyleuk"/>
+    </input>
+    <input node="#Urinary">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Urinary" source="PatientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+    </input>
+    <joinAttribute name="Ageatdiagnosis"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="Lymyleuk"/>
+      <viewAttribute id="Urinary"/>
+      <viewAttribute id="Femgen" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Lymyleuk" source="Lymyleuk"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Urinary" source="Urinary"/>
+    </input>
+    <input node="#Femgen">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Femgen" source="PatientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+    </input>
+    <joinAttribute name="Ageatdiagnosis"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="Ageatdiagnosis" key="true" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ageatdiagnosis"/>
+      <keyMapping columnObjectName="Join_2" columnName="Ageatdiagnosis"/>
+    </attribute>
+    <attribute id="Lymyleuk" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PatientID"/>
+      <keyMapping columnObjectName="Join_2" columnName="Lymyleuk"/>
+    </attribute>
+    <attribute id="Urinary" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PatientID_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="Urinary"/>
+    </attribute>
+    <attribute id="Femgen" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PatientID_2"/>
+      <keyMapping columnObjectName="Join_2" columnName="Femgen"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-9" y="281"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="39" y="259"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="62" y="235"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

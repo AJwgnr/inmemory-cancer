@@ -1,0 +1,326 @@
+<!-- this is a comment. in the next tag, the xmlns tags define namespaces, the name after of the equality signs being the name of the namespace. In the code below, we can use this name instead of the full path -->
+<mvc:View controllerName="content.dataViewer"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:table="sap.ui.table"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:l="sap.ui.commons.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<!-- view content goes here -->
+	<!-- this HTML paragraph is used as a spacer -->
+	<html:p/>
+	<!-- here we have the definition of the table.
+Next to different settings for the appearance
+and behavior of the table, we bind the endpoint
+/Sales of our data source to our rows -->
+
+
+
+
+	<table:Table
+id="salesOrdersTable"
+visibleRowCount="30"
+selectionMode="Single"
+navigationMode="Paginator"
+editable="false"
+rows="{/UnionCalculationView}">
+		<!-- this defines one column in the table. The property
+"sortProperty" defines the column of the data source on
+which the column will sort -->
+		<table:Column sortProperty="Sex">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Sex" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{Sex}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			<table:Column sortProperty="Yearofdiagnosis">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Year of diagnosis" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{Yearofdiagnosis}"/>
+			</table:template>
+			</table:Column>	
+			
+			<table:Column sortProperty="RaceEthnicity">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Race Ethnicity" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{RaceEthnicity}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			<table:Column sortProperty="SurvivalMonths">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Survival Months" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{SurvivalMonths}"/>
+			</table:template>
+			</table:Column>	
+			
+				<table:Column sortProperty="Ageatdiagnosis">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Age at diagnosis" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{Ageatdiagnosis}"/>
+			</table:template>
+			</table:Column>	
+			
+			<table:Column sortProperty="Laterality">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Laterality" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{Laterality}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			
+			<table:Column sortProperty="Grade">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="Grade" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{Grade}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			
+			
+			<table:Column sortProperty="TumorMarker1">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="TumorMarker1" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{TumorMarker1}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			
+			<table:Column sortProperty="CSExtension">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="CSExtension" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{CSExtension}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			<table:Column sortProperty="SeerOtherCauseOfDeathClassification">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="SeerOtherCauseOfDeathClassification" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{SeerOtherCauseOfDeathClassification}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			<table:Column sortProperty="TotalNumberOfInSituMalignantTumorsForPatien">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="TotalNumberOfInSituMalignantTumorsForPatien" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{TotalNumberOfInSituMalignantTumorsForPatien}"/>
+			</table:template>
+			</table:Column>	
+			
+					<table:Column sortProperty="EODExtension">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="EODExtension" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{EODExtension}"/>
+			</table:template>
+			</table:Column>	
+			
+			<table:Column sortProperty="TotalNumberOfBenignBorderlineTumorsForPatient">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="TotalNumberOfBenignBorderlineTumorsForPatient" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{TotalNumberOfBenignBorderlineTumorsForPatient}"/>
+			</table:template>
+			</table:Column>	
+			
+			<table:Column sortProperty="SeerHistoricStageA">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="SeerHistoricStageA" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{SeerHistoricStageA}"/>
+			</table:template>
+			</table:Column>	
+			
+			<table:Column sortProperty="FirstMalignentPrimaryIndicator">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="FirstMalignentPrimaryIndicator" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{FirstMalignentPrimaryIndicator}"/>
+			</table:template>
+			</table:Column>	
+			
+			<table:Column sortProperty="VitalStatusRecode">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="VitalStatusRecode" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{VitalStatusRecode}"/>
+			</table:template>
+			</table:Column>	
+			
+				<table:Column sortProperty="EODTumorSize">
+			<!-- the label is shown in the header of the table -->
+			<table:label>
+				<Label text="EODTumorSize" design="Bold"/>
+			</table:label>
+			<!-- for each column, a template is required which
+defines how how the data is visualized -->
+			<table:template>
+				<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+				<Label text="{EODTumorSize}"/>
+			</table:template>
+			</table:Column>	
+			
+			
+			
+	
+			
+			
+			
+	</table:Table>
+</mvc:View>
+
+
+

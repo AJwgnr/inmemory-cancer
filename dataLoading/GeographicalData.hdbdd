@@ -1,0 +1,9 @@
+namespace cancer_project.dataLoading;
+@Schema : 'CANCER_PROJECT'
+@Catalog.tableType : #COLUMN
+entity GeographicalData {
+    key State : String(30);
+    	Latitude : DecimalFloat ;
+	    Longitude : DecimalFloat ;
+	City: String(30);
+};

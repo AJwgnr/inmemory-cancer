@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Femgen" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="CUBE" schemaVersion="2.3" defaultClient="$$client$$" visibility="reportingEnabled" outputViewType="Aggregation" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="Femgen"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="femgen" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.baseViews/calculationviews/femgen</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="femgen">
+  <attributes>
+    <attribute id="SequenceNumberCentral" hidden="true" key="true" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SequenceNumberCentral"/>
+      <keyMapping columnObjectName="femgen" columnName="SequenceNumberCentral"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="TumorRatio" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TumorRatio"/>
+      <keyCalculation datatype="REAL" expressionLanguage="COLUMN_ENGINE">
+        <formula>&quot;TotalNumberOfInSituMalignantTumorsForPatien&quot;/&quot;PatientID&quot;</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures>
+    <measure id="PatientID" order="1" aggregationType="sum" engineAggregation="count" measureType="simple" key="true">
+      <descriptions defaultDescription="PatientID"/>
+      <measureMapping columnObjectName="femgen" columnName="PatientID"/>
+    </measure>
+    <measure id="TotalNumberOfInSituMalignantTumorsForPatien" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <measureMapping columnObjectName="femgen" columnName="TotalNumberOfInSituMalignantTumorsForPatien"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

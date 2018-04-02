@@ -1,0 +1,100 @@
+<!-- this is a comment. In the next tag, the xmlns tags define
+namespaces, the name after of the equality signs being the
+name of the namespace. In the code below, we can use this
+name instead of the full path -->
+<mvc:View controllerName="content.Overview"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<!-- view content goes here -->
+	<!-- this HTML paragraph is used as a spacer -->
+	<html:p/>
+	<Image
+					src="https://seer.cancer.gov/i/seer.svg"
+					densityAware="false"
+					width="700px"
+	 ></Image>
+	<l:Grid defaultSpan="L3 M4 S6" class="sapUiSmallMarginTop">
+		<l:content>
+			<StandardListItem
+				title="Seer Dataset"
+				design="bold" 
+				info="9.675.661 Entites"
+				infoState="Success"
+				icon="sap-icon://table-view">
+				<layoutData>
+					<l:GridData span="L12 M12 S12" />
+				</layoutData>
+			</StandardListItem>
+			<StandardListItem
+				title="Different Cancer Types"
+				description="9" />
+			<StandardListItem
+				title="Different States in the USA"
+				description="18" />
+				<StandardListItem
+				title="Attributes for each entry"
+				description="134" />
+			<StandardListItem
+				title="SAP UI5 APP"
+				info="1.174.477 Entities"
+				infoState="Warning"
+				icon="sap-icon://internet-browser">
+				<layoutData>
+					<l:GridData span="L12 M12 S12" linebreakL="true" linebreakM="true" linebreakS="true" />
+				</layoutData>
+			</StandardListItem>
+			<StandardListItem
+				title="Different Cancer Types"
+				description="3" />
+					<StandardListItem
+				title="Different States of the USA"
+				description="18" />	
+				<StandardListItem
+				title="Attributes for each entry"
+				description="134" />
+		
+				
+				
+				
+			<StandardListItem
+				title="Descriptive Analysis"
+				info="3 Analysis"
+				infoState="Success"
+				icon="sap-icon://line-charts">
+				<layoutData>
+					<l:GridData span="L12 M12 S12" linebreakL="true" linebreakM="true" linebreakS="true" />
+				</layoutData>
+			</StandardListItem>
+			<StandardListItem
+				title="Age at diagnosis"
+				description="Cancer Lymyleuk, Femgen, Urinary" />
+			<StandardListItem
+				title="Sex"
+				description="Cancer Lymyleuk, Urinary" />
+			<StandardListItem
+				title="Average Survival Months"
+				description="Cancer Lymyleuk, Femgen, Urinary" />
+			<StandardListItem
+				title="Predictive Analysis"
+				info="2 Algorithms"
+				infoState="Success"
+				icon="sap-icon://business-objects-experience">
+				<layoutData>
+					<l:GridData span="L12 M12 S12" linebreakL="true" linebreakM="true" linebreakS="true" />
+				</layoutData>
+			</StandardListItem>
+			<StandardListItem
+				title="Classification"
+				description="Predicting Malignant Cancer" />
+				<StandardListItem
+				title="Regression"
+				description="Predicting survival Months" />
+		</l:content>
+	</l:Grid>
+
+</mvc:View>

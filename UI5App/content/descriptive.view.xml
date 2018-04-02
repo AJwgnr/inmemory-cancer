@@ -1,0 +1,210 @@
+<!-- this is a comment. in the next tag, the xmlns tags define namespaces, the name after of the equality signs being the name of the namespace. In the code below, we can use this name instead of the full path -->
+<mvc:View controllerName="content.descriptive"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:table="sap.ui.table"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<!-- view content goes here -->
+	<!-- this HTML paragraph is used as a spacer -->
+	<html:p/>
+	<!-- here we have the definition of the table.
+Next to different settings for the appearance
+and behavior of the table, we bind the endpoint
+/Sales of our data source to our rows -->
+
+<Label text="This page contains the different descriptive analytics we applied to the seer cancer data set.
+"  design="Bold" />
+
+
+	<viz:VizFrame
+		id="barchart"
+		width="100%"
+		height="800px"
+		vizType="info/column"
+		uiConfig="{
+		applicationSet:'fiori'
+		}"
+		vizProperties="{
+		plotArea:{
+		dataLabel : {
+		visible : true
+		},
+		dataPointSize : {
+		min : 0,
+		max : 4
+		}
+		},
+		title: {
+		alignment :'left',
+		visible : true,
+		text : 'Age at diagnosis of the different cancer types'
+		}
+		}">
+		<viz:dataset>
+			<viz.data:FlattenedDataset id="flattenedData" data="{/JoinedDiagnosisAge}">
+				<viz.data:dimensions>
+					<viz.data:DimensionDefinition name="Age at diagnosis" value="{Ageatdiagnosis}" />
+				</viz.data:dimensions>
+				<viz.data:measures>
+					<viz.data:MeasureDefinition name="Number of Lymyleuk cancer patients" value="{Lymyleuk}" />
+					<viz.data:MeasureDefinition name="Number of Urinary cancer patients" value="{Urinary}" />
+					<viz.data:MeasureDefinition name="Number of Femgen cancer patients" value="{Femgen}" />
+				</viz.data:measures>
+			</viz.data:FlattenedDataset>
+		</viz:dataset>
+		<viz:feeds>
+			<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Number of Lymyleuk cancer patients,Number of Urinary cancer patients,Number of Femgen cancer patients" />
+			<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Age at diagnosis" />
+		</viz:feeds>
+	</viz:VizFrame>
+
+<l:HorizontalLayout class="sapUiContentPadding" >
+		
+			<viz:VizFrame
+		id="SexLymyleuk"
+		width="500px"
+		densityAware="true"
+		height="500px"
+		vizType="info/pie"
+		uiConfig="{
+		applicationSet:'fiori'
+		}"
+		vizProperties="{
+		plotArea:{
+		dataLabel : {
+		visible : true
+		}
+		},
+		title: {
+		alignment :'left',
+		visible : true,
+		text : 'Sex Ratio Lymyleuk'
+		}
+		}">
+				<viz:dataset>
+					<viz.data:FlattenedDataset data="{/SexLymyleuk}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition name="Sex" value="{Sex}" displayValue="Male,Female" />
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition value="{PatientID}" name="PatientID" />
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem uid="size" type="Measure" values="PatientID" />
+					<viz.feeds:FeedItem uid="color" type="Dimension" values="Sex" />
+				</viz:feeds>
+			</viz:VizFrame>
+			<viz:Popover id="vizPopover"></viz:Popover>
+		
+		
+	
+	
+		
+			<viz:VizFrame
+		id="SexUrinary"
+		width="500px"
+		height="500px"
+		densityAware="true"
+		vizType="info/pie"
+		uiConfig="{
+		applicationSet:'fiori'
+		}"
+		vizProperties="{
+		plotArea:{
+		dataLabel : {
+		visible : true
+		}
+		},
+		title: {
+		alignment :'left',
+		visible : true,
+		text : 'Sex Ratio Urinary'
+		}
+		}">
+				<viz:dataset>
+					<viz.data:FlattenedDataset data="{/SexUrinary}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition name="Sex" value="{Sex}"  />
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition value="{PatientID}" name="PatientID" />
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem uid="size" type="Measure" values="PatientID" />
+					<viz.feeds:FeedItem uid="color" type="Dimension" values="Sex" />
+				</viz:feeds>
+				</viz:VizFrame>
+			<viz:Popover id="vizPopover1"></viz:Popover>
+
+		</l:HorizontalLayout>	
+		
+		
+			<viz:VizFrame
+		id="barchart1"
+		width="100%"
+		height="800px"
+		vizType="info/column"
+		uiConfig="{
+		applicationSet:'fiori'
+		}"
+		vizProperties="{
+		plotArea:{
+		dataLabel : {
+		visible : true
+		},
+		dataPointSize : {
+		min : 0,
+		max : 4
+		}
+		},
+		title: {
+		alignment :'left',
+		visible : true,
+		text : 'Average Survival Months based on diagnosis age'
+		}
+		}">
+				<viz:dataset>
+					<viz.data:FlattenedDataset id="flattenedData2" data="{/avSLymyleuk}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition name="Age at cancer diagnosis" value="{Ageatdiagnosis}" />
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition name="Average Survival Month Urinary Cancer" value="{UrinaryAverageSurvivalMonth}" />
+							<viz.data:MeasureDefinition name="Average Survival Month Femgen Cancer" value="{FemgenAverageSurvivalMonth}" />
+							<viz.data:MeasureDefinition name="Average Survival Month Lymyleuk Cancer" value="{LymyleukAverageSurvivalMonth}" />
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Average Survival Month Urinary Cancer,Average Survival Month Femgen Cancer,Average Survival Month Lymyleuk Cancer" />
+					<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Age at cancer diagnosis" />
+				</viz:feeds>
+			</viz:VizFrame>
+
+
+
+Example report for different descriptive analytics for a specific cancer type	
+	
+	
+	<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true">
+		<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+			<PDFViewer source="ressources/Visualization story.pdf" title="Descriptive Analytics" height="800px">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</PDFViewer>
+		</FlexBox>
+	</ScrollContainer>
+</mvc:View>

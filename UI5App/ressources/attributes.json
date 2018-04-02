@@ -1,0 +1,17 @@
+{
+	"AttributeCollection": [
+		{
+			"attribute":"Registry"
+		},{
+			"attribute":"MaritalStatus"
+		},{
+			"attribute":"RaceEthnicity"
+		},{
+			"attribute":"NHIADerivedHispanicOrigin"
+		},
+		{
+			"attribute":"Ageatdiagnosis"
+		},{
+			"attribute":"YearofBirth"
+		}]
+		}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Urinary" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="CUBE" schemaVersion="2.3" defaultClient="$$client$$" visibility="reportingEnabled" outputViewType="Aggregation" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="Urinary"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Urinary" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.baseViews/calculationviews/Urinary</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="Urinary">
+  <attributes>
+    <attribute id="SequenceNumberCentral" hidden="true" key="true" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SequenceNumberCentral"/>
+      <keyMapping columnObjectName="Urinary" columnName="SequenceNumberCentral"/>
+    </attribute>
+    <attribute id="Sex" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sex"/>
+      <keyMapping columnObjectName="Urinary" columnName="Sex"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="PatientID" order="1" aggregationType="sum" engineAggregation="count" measureType="simple" key="true">
+      <descriptions defaultDescription=""/>
+      <measureMapping columnObjectName="Urinary" columnName="PatientID"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

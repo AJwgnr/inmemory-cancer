@@ -1,0 +1,8 @@
+service {
+    "_SYS_BIC"."cancer_project.calculationViews.aggregatedViews.race/Femgen" as "RaceFemgen"
+    keys generate local "ID";
+    "_SYS_BIC"."cancer_project.calculationViews.aggregatedViews.race/Lymyleuk" as "RaceLymyleuk"
+    keys generate local "ID";
+    "_SYS_BIC"."cancer_project.calculationViews.aggregatedViews.race/Urinary" as "RaceUrinary"
+    keys generate local "ID";
+}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="UnionCalculationView" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="UnionCalculationView"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="femgen" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.baseViews/calculationviews/femgen</resourceUri>
+  </DataSource>
+  <DataSource id="Urinary" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.baseViews/calculationviews/Urinary</resourceUri>
+  </DataSource>
+  <DataSource id="Lymyleuk" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.baseViews/calculationviews/Lymyleuk</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="PatientID"/>
+      <viewAttribute id="RaceEthnicity"/>
+      <viewAttribute id="Registry"/>
+      <viewAttribute id="SeerOtherCauseOfDeathClassification"/>
+      <viewAttribute id="SequenceNumberCentral"/>
+      <viewAttribute id="Sex"/>
+      <viewAttribute id="SurvivalMonths"/>
+      <viewAttribute id="SurvivalMonthsFlag"/>
+      <viewAttribute id="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <viewAttribute id="YearofBirth"/>
+      <viewAttribute id="Yearofdiagnosis"/>
+    
+      <viewAttribute id="CancerType" datatype="VARCHAR" length="20"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#femgen" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PatientID" source="PatientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RaceEthnicity" source="RaceEthnicity"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Registry" source="Registry"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SeerOtherCauseOfDeathClassification" source="SeerOtherCauseOfDeathClassification"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SequenceNumberCentral" source="SequenceNumberCentral"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Sex" source="Sex"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonths" source="SurvivalMonths"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonthsFlag" source="SurvivalMonthsFlag"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TotalNumberOfInSituMalignantTumorsForPatien" source="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YearofBirth" source="YearofBirth"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Yearofdiagnosis" source="Yearofdiagnosis"/>
+    
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CancerType" null="false" value="Femgen"/>
+    </input>
+    <input node="#Urinary" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PatientID" source="PatientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RaceEthnicity" source="RaceEthnicity"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Registry" source="Registry"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SeerOtherCauseOfDeathClassification" source="SeerOtherCauseOfDeathClassification"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SequenceNumberCentral" source="SequenceNumberCentral"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Sex" source="Sex"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonths" source="SurvivalMonths"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonthsFlag" source="SurvivalMonthsFlag"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TotalNumberOfInSituMalignantTumorsForPatien" source="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YearofBirth" source="YearofBirth"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Yearofdiagnosis" source="Yearofdiagnosis"/>
+    
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CancerType" null="false" value="Urinary"/>
+    </input>
+    <input node="#Lymyleuk" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PatientID" source="PatientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RaceEthnicity" source="RaceEthnicity"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Registry" source="Registry"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SeerOtherCauseOfDeathClassification" source="SeerOtherCauseOfDeathClassification"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SequenceNumberCentral" source="SequenceNumberCentral"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Sex" source="Sex"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonths" source="SurvivalMonths"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonthsFlag" source="SurvivalMonthsFlag"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TotalNumberOfInSituMalignantTumorsForPatien" source="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YearofBirth" source="YearofBirth"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Yearofdiagnosis" source="Yearofdiagnosis"/>
+    
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CancerType" null="false" value="Lymyleuk"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Union_1">
+  <attributes>
+    <attribute id="Ageatdiagnosis" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ageatdiagnosis"/>
+      <keyMapping columnObjectName="Union_1" columnName="Ageatdiagnosis"/>
+    </attribute>
+    <attribute id="PatientID" key="true" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PatientID"/>
+      <keyMapping columnObjectName="Union_1" columnName="PatientID"/>
+    </attribute>
+    <attribute id="RaceEthnicity" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RaceEthnicity"/>
+      <keyMapping columnObjectName="Union_1" columnName="RaceEthnicity"/>
+    </attribute>
+    <attribute id="Registry" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Registry"/>
+      <keyMapping columnObjectName="Union_1" columnName="Registry"/>
+    </attribute>
+    <attribute id="SeerOtherCauseOfDeathClassification" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SeerOtherCauseOfDeathClassification"/>
+      <keyMapping columnObjectName="Union_1" columnName="SeerOtherCauseOfDeathClassification"/>
+    </attribute>
+    <attribute id="SequenceNumberCentral" key="true" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SequenceNumberCentral"/>
+      <keyMapping columnObjectName="Union_1" columnName="SequenceNumberCentral"/>
+    </attribute>
+    <attribute id="Sex" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sex"/>
+      <keyMapping columnObjectName="Union_1" columnName="Sex"/>
+    </attribute>
+    <attribute id="SurvivalMonths" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SurvivalMonths"/>
+      <keyMapping columnObjectName="Union_1" columnName="SurvivalMonths"/>
+    </attribute>
+    <attribute id="SurvivalMonthsFlag" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SurvivalMonthsFlag"/>
+      <keyMapping columnObjectName="Union_1" columnName="SurvivalMonthsFlag"/>
+    </attribute>
+    <attribute id="TotalNumberOfInSituMalignantTumorsForPatien" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TotalNumberOfInSituMalignantTumorsForPatien"/>
+      <keyMapping columnObjectName="Union_1" columnName="TotalNumberOfInSituMalignantTumorsForPatien"/>
+    </attribute>
+    <attribute id="YearofBirth" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="YearofBirth"/>
+      <keyMapping columnObjectName="Union_1" columnName="YearofBirth"/>
+    </attribute>
+    <attribute id="Yearofdiagnosis" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Yearofdiagnosis"/>
+      <keyMapping columnObjectName="Union_1" columnName="Yearofdiagnosis"/>
+    </attribute>
+  
+    <attribute id="CancerType" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CancerType"/>
+      <keyMapping columnObjectName="Union_1" columnName="CancerType"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="87" y="256"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

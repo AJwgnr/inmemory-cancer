@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="joinAverageSurvival" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="joinAverageSurvival"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Urinary" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.aggregatedViews.averageSurvivalByDiagnosis/calculationviews/Urinary</resourceUri>
+  </DataSource>
+  <DataSource id="Femgen" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.aggregatedViews.averageSurvivalByDiagnosis/calculationviews/Femgen</resourceUri>
+  </DataSource>
+  <DataSource id="Lymyleuk" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.aggregatedViews.averageSurvivalByDiagnosis/calculationviews/Lymyleuk</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="UrinaryAgeatdiagnosis"/>
+      <viewAttribute id="UrinaryAverageSurvivalMonth"/>
+      <viewAttribute id="FemgenAverageSurvivalMonth"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Urinary">
+      <mapping xsi:type="Calculation:AttributeMapping" target="UrinaryAgeatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UrinaryAverageSurvivalMonth" source="AverageSurvivalMonth"/>
+    </input>
+    <input node="#Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="FemgenAverageSurvivalMonth" source="FemgenAverageSurvivalMonth"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UrinaryAgeatdiagnosis" source="FemgenAgeatdiagnosis"/>
+    </input>
+    <joinAttribute name="UrinaryAgeatdiagnosis"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="FemgenAverageSurvivalMonth"/>
+    
+      <viewAttribute id="FemgenAgeatdiagnosis"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Femgen">
+      <mapping xsi:type="Calculation:AttributeMapping" target="FemgenAgeatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FemgenAverageSurvivalMonth" source="AverageSurvivalMonth"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="LymyleukAverageSurvivalMonth"/>
+      <viewAttribute id="UrinaryAverageSurvivalMonth"/>
+      <viewAttribute id="FemgenAverageSurvivalMonth"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Lymyleuk">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LymyleukAverageSurvivalMonth" source="AverageSurvivalMonth"/>
+    </input>
+    <input node="#Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="UrinaryAverageSurvivalMonth" source="UrinaryAverageSurvivalMonth"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FemgenAverageSurvivalMonth" source="FemgenAverageSurvivalMonth"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="UrinaryAgeatdiagnosis"/>
+    </input>
+    <joinAttribute name="Ageatdiagnosis"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="Ageatdiagnosis" key="true" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ageatdiagnosis"/>
+      <keyMapping columnObjectName="Join_2" columnName="Ageatdiagnosis"/>
+    </attribute>
+    <attribute id="LymyleukAverageSurvivalMonth" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LymyleukAverageSurvivalMonth"/>
+      <keyMapping columnObjectName="Join_2" columnName="LymyleukAverageSurvivalMonth"/>
+    </attribute>
+    <attribute id="UrinaryAverageSurvivalMonth" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UrinaryAverageSurvivalMonth"/>
+      <keyMapping columnObjectName="Join_2" columnName="UrinaryAverageSurvivalMonth"/>
+    </attribute>
+    <attribute id="FemgenAverageSurvivalMonth" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FemgenAverageSurvivalMonth"/>
+      <keyMapping columnObjectName="Join_2" columnName="FemgenAverageSurvivalMonth"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="false" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="86" y="349"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="82" y="481"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="167"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

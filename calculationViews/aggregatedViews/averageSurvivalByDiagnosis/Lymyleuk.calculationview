@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Lymyleuk" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="CUBE" schemaVersion="2.3" defaultClient="$$client$$" visibility="reportingEnabled" outputViewType="Aggregation" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="Lymyleuk"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Lymyleuk" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>/cancer_project.calculationViews.baseViews/calculationviews/Lymyleuk</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Ageatdiagnosis"/>
+      <viewAttribute id="PatientID"/>
+      <viewAttribute id="SequenceNumberCentral"/>
+      <viewAttribute id="SurvivalMonths"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#Lymyleuk">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Ageatdiagnosis" source="Ageatdiagnosis"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PatientID" source="PatientID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SequenceNumberCentral" source="SequenceNumberCentral"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SurvivalMonths" source="SurvivalMonths"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="Ageatdiagnosis" order="1" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ageatdiagnosis"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Ageatdiagnosis"/>
+    </attribute>
+    <attribute id="SequenceNumberCentral" hidden="true" key="true" order="3" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SequenceNumberCentral"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SequenceNumberCentral"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="AverageSurvivalMonth" order="5" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AverageSurvivalMonth"/>
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>&quot;SurvivalMonths&quot;/&quot;PatientID&quot;</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures>
+    <measure id="PatientID" order="2" aggregationType="sum" engineAggregation="count" measureType="simple" key="true">
+      <descriptions defaultDescription="PatientID"/>
+      <measureMapping columnObjectName="Projection_1" columnName="PatientID"/>
+    </measure>
+    <measure id="SurvivalMonths" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SurvivalMonths"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SurvivalMonths"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="83" y="228"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
